@@ -4,7 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    android:windowSoftInputMode="adjustPan"
     app:startDestination="@+id/navigation_home">
 
     <fragment

@@ -60,7 +60,7 @@ public class HomeFragment extends Fragment {
 
                 HomeListService homeListService = new HomeListService(v.getContext());
                 boolean isSuccess = homeListService.insertGoodsInfo(goods);
-                if (isSuccess) {
+                if (!isSuccess) {
                     Toast.makeText(v.getContext(), "插入成功", Toast.LENGTH_SHORT).show();
                     goodsNameEditText.setText("");
                     goodsCodeEditText.setText("");

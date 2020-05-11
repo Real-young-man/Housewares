@@ -22,7 +22,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 ");";
         String sqlCreateGoods = "CREATE TABLE goods(" +
                 "  goods_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +//id
-                "  goods_code TEXT," +     //编号
+                "  goods_code TEXT NOT NULL," +     //编号
                 "  goods_name TEXT," +          //名字
                 "  goods_specs TEXT," +         //规格
                 "  goods_executive_standard TEXT," + //执行标准

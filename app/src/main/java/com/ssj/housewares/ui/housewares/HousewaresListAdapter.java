@@ -1,5 +1,7 @@
 package com.ssj.housewares.ui.housewares;
 
+import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.ssj.housewares.R;
 import com.ssj.housewares.service.HomeListService;
+import com.ssj.housewares.use.ShowHousewaresInfo;
 
 
 public class HousewaresListAdapter extends RecyclerView.Adapter {
@@ -49,7 +52,7 @@ public class HousewaresListAdapter extends RecyclerView.Adapter {
 
         }
 
-        public void bindView(int position) {
+        public void bindView(final int position) {
             HomeListService homeListService = new HomeListService(itemView.getContext());
             mGoodsNameValuesTextView.setText(homeListService.getGoodsInfo(position).getGoodsName());
             Log.d(TAG, "bindView: " + homeListService.getGoodsInfo(position).getGoodsName());
@@ -57,7 +60,10 @@ public class HousewaresListAdapter extends RecyclerView.Adapter {
             mShowGoodsButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(v.getContext(),"111",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(v.getContext(), ShowHousewaresInfo.class);
+                    intent.putExtra("id", position);
+                    v.getContext().startActivity(intent);
+                    Toast.makeText(v.getContext(), "111", Toast.LENGTH_SHORT).show();
                 }
             });
         }
@@ -67,5 +73,6 @@ public class HousewaresListAdapter extends RecyclerView.Adapter {
         public void onClick(View v) {
 
         }
+
     }
 }

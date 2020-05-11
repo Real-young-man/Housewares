@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView_home_goods_name"
+            android:id="@+id/textView_show_goods_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -25,7 +25,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/editText_home_goods_name"
+            android:id="@+id/textView_show_goods_name_value"
             android:layout_width="220dp"
             android:layout_height="50dp"
             android:layout_marginTop="32dp"
@@ -35,11 +35,11 @@
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.672"
-            app:layout_constraintStart_toEndOf="@id/textView_home_goods_name"
+            app:layout_constraintStart_toEndOf="@id/textView_show_goods_name"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView_home_goods_id"
+            android:id="@+id/textView_show_goods_code"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -50,10 +50,10 @@
             android:textColor="#696767"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView_home_goods_name" />
+            app:layout_constraintTop_toBottomOf="@id/textView_show_goods_name" />
 
         <TextView
-            android:id="@+id/editText_home_goods_id"
+            android:id="@+id/textView_show_goods_code_value"
             android:layout_width="220dp"
             android:layout_height="50dp"
             android:layout_marginTop="24dp"
@@ -63,11 +63,11 @@
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.655"
-            app:layout_constraintStart_toEndOf="@id/textView_home_goods_id"
-            app:layout_constraintTop_toBottomOf="@id/editText_home_goods_name" />
+            app:layout_constraintStart_toEndOf="@id/textView_show_goods_code"
+            app:layout_constraintTop_toBottomOf="@id/textView_show_goods_name_value" />
 
         <TextView
-            android:id="@+id/textView_home_goods_specs"
+            android:id="@+id/textView_show_goods_specs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -77,10 +77,10 @@
             android:textSize="20sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView_home_goods_id" />
+            app:layout_constraintTop_toBottomOf="@id/textView_show_goods_code" />
 
         <TextView
-            android:id="@+id/editText_home_goods_specs"
+            android:id="@+id/textView_show_goods_specs_value"
             android:layout_width="220dp"
             android:layout_height="50dp"
             android:layout_marginStart="40dp"
@@ -91,11 +91,11 @@
             android:background="@drawable/rounded_edit_view"
             android:textSize="20sp"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView_home_goods_specs"
-            app:layout_constraintTop_toBottomOf="@id/editText_home_goods_id" />
+            app:layout_constraintStart_toEndOf="@id/textView_show_goods_specs"
+            app:layout_constraintTop_toBottomOf="@id/textView_show_goods_code_value" />
 
         <TextView
-            android:id="@+id/textView_home_goods_es"
+            android:id="@+id/textView_show_goods_es"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -105,35 +105,39 @@
             android:textSize="20sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView_home_goods_specs" />
+            app:layout_constraintTop_toBottomOf="@id/textView_show_goods_specs" />
 
         <TextView
-            android:id="@+id/editText_home_goods_es"
+            android:id="@+id/textView_show_goods_es_value"
             android:layout_width="220dp"
             android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="36dp"
             android:layout_marginRight="36dp"
             android:background="@drawable/rounded_edit_view"
             android:textSize="20sp"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editText_home_goods_specs" />
+            app:layout_constraintStart_toEndOf="@+id/textView_show_goods_es"
+            app:layout_constraintTop_toBottomOf="@id/textView_show_goods_specs_value" />
+
 
         <TextView
-            android:id="@+id/textView_home_goods_producer"
+            android:id="@+id/textView_show_goods_producer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
-            android:layout_marginEnd="52dp"
-            android:layout_marginRight="52dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginRight="27dp"
             android:text="生产商"
             android:textSize="20sp"
-            app:layout_constraintEnd_toStartOf="@id/editText_home_goods_producer"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView_home_goods_es" />
+            app:layout_constraintRight_toLeftOf="@id/textView_show_goods_producer_value"
+            app:layout_constraintTop_toBottomOf="@id/textView_show_goods_es" />
 
         <TextView
-            android:id="@+id/editText_home_goods_producer"
+            android:id="@+id/textView_show_goods_producer_value"
             android:layout_width="220dp"
             android:layout_height="50dp"
             android:layout_marginTop="24dp"
@@ -142,24 +146,23 @@
             android:background="@drawable/rounded_edit_view"
             android:textSize="20sp"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editText_home_goods_es" />
-
+            app:layout_constraintTop_toBottomOf="@id/textView_show_goods_es_value" />
 
         <TextView
-            android:id="@+id/textView_home_goods_address"
+            android:id="@+id/textView_show_goods_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
-            android:layout_marginEnd="64dp"
-            android:layout_marginRight="64dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginRight="36dp"
             android:text="地址"
             android:textSize="20sp"
-            app:layout_constraintEnd_toStartOf="@id/editText_home_goods_address"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView_home_goods_producer" />
+            app:layout_constraintRight_toLeftOf="@id/textView_show_goods_address_value"
+            app:layout_constraintTop_toBottomOf="@id/textView_show_goods_producer" />
 
         <TextView
-            android:id="@+id/editText_home_goods_address"
+            android:id="@+id/textView_show_goods_address_value"
             android:layout_width="220dp"
             android:layout_height="50dp"
             android:layout_marginTop="24dp"
@@ -168,23 +171,23 @@
             android:background="@drawable/rounded_edit_view"
             android:textSize="20sp"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editText_home_goods_producer" />
+            app:layout_constraintTop_toBottomOf="@id/textView_show_goods_producer_value" />
 
         <TextView
-            android:id="@+id/textView_home_goods_tel"
+            android:id="@+id/textView_show_goods_tel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
-            android:layout_marginEnd="64dp"
-            android:layout_marginRight="64dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginRight="36dp"
             android:text="电话"
             android:textSize="20sp"
-            app:layout_constraintEnd_toStartOf="@+id/editText_home_goods_tel"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView_home_goods_address" />
+            app:layout_constraintRight_toLeftOf="@id/textView_show_goods_tel_value"
+            app:layout_constraintTop_toBottomOf="@id/textView_show_goods_address" />
 
         <TextView
-            android:id="@+id/editText_home_goods_tel"
+            android:id="@+id/textView_show_goods_tel_value"
             android:layout_width="220dp"
             android:layout_height="50dp"
             android:layout_marginTop="24dp"
@@ -193,7 +196,7 @@
             android:background="@drawable/rounded_edit_view"
             android:textSize="20sp"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editText_home_goods_address" />
+            app:layout_constraintTop_toBottomOf="@id/textView_show_goods_address_value" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -61,27 +61,27 @@ public class MainActivity extends AppCompatActivity {
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent homeIntent = new Intent(MainActivity.this, HomeActivity.class);
                 startActivity(new Intent(getApplicationContext(), NavigationActivity.class));
-                LoginService loginService = new LoginService(MainActivity.this);
-                String loginText = mLoginEditText.getText().toString();
-                String passwordText = mPasswordEditText.getText().toString();
-                boolean flag = loginService.isLogin(loginText, passwordText);
-                Toast toast = Toast.makeText(MainActivity.this, null, Toast.LENGTH_SHORT);
-                if (code.equals(mCodeEditText.getText().toString()) && flag) {
-//                    Intent homeIntent = new Intent(MainActivity.this,HomeActivity.class);
-//                    startActivity(homeIntent);
-                } else if (mCodeEditText.getText().toString().isEmpty()) {
-                    toast.setText("验证码不为空");
-                    toast.show();
-                } else if (!code.equals(mCodeEditText.getText().toString())) {
-                    toast.setText("验证码不匹配");
-                    toast.show();
-                    Toast.makeText(MainActivity.this, null, Toast.LENGTH_SHORT).show();
-                } else {
-                    toast.setText("用户名或密码错误！");
-                    toast.show();
-                }
+                finish();
+//                LoginService loginService = new LoginService(MainActivity.this);
+//                String loginText = mLoginEditText.getText().toString();
+//                String passwordText = mPasswordEditText.getText().toString();
+//                boolean flag = loginService.isLogin(loginText, passwordText);
+//                Toast toast = Toast.makeText(MainActivity.this, null, Toast.LENGTH_SHORT);
+//                if (code.equals(mCodeEditText.getText().toString()) && flag) {
+////                    startActivity(new Intent(getApplicationContext(), NavigationActivity.class));
+////                    finish();
+//                } else if (mCodeEditText.getText().toString().isEmpty()) {
+//                    toast.setText("验证码不为空");
+//                    toast.show();
+//                } else if (!code.equals(mCodeEditText.getText().toString())) {
+//                    toast.setText("验证码不匹配");
+//                    toast.show();
+//                    Toast.makeText(MainActivity.this, null, Toast.LENGTH_SHORT).show();
+//                } else {
+//                    toast.setText("用户名或密码错误！");
+//                    toast.show();
+//                }
             }
         });
         mRegisterTextView = findViewById(R.id.register_textView);
