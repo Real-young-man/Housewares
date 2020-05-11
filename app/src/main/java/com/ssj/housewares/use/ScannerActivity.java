@@ -2,10 +2,12 @@ package com.ssj.housewares.use;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.google.zxing.Result;
+import com.ssj.housewares.ui.home.HomeFragment;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
@@ -24,7 +26,10 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
 
     @Override
     public void handleResult(Result result) {
-        Toast.makeText(ScannerActivity.this,result.getText(),Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent();
+        intent.putExtra("date_return", result.getText());
+        setResult(RESULT_OK, intent);
         onBackPressed();
 
     }

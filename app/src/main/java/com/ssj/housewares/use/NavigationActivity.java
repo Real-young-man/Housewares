@@ -34,19 +34,10 @@ public class NavigationActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
-        init();
     }
 
 
 
-    private void init() {
-        FloatingActionButton fab = findViewById(R.id.home_scanner_button);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), ScannerActivity.class));
-            }
-        });
-    }
+
 
 }

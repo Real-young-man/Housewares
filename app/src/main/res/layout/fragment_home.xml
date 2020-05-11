@@ -49,16 +49,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView_home_goods_name" />
 
-    <EditText
-        android:id="@+id/editText_home_goods_id"
+
+    <TextView
+        android:id="@+id/textView_home_goods_id_value"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:background="@drawable/rounded_edit_view"
-        android:inputType="number"
-        android:maxLines="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.655"
         app:layout_constraintStart_toEndOf="@id/textView_home_goods_id"
@@ -89,8 +88,9 @@
         android:inputType="text"
         android:maxLines="1"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_home_goods_specs"
-        app:layout_constraintTop_toBottomOf="@id/editText_home_goods_id" />
+        app:layout_constraintStart_toEndOf="@id/textView_home_goods_specs"
+        app:layout_constraintTop_toBottomOf="@id/textView_home_goods_id_value"
+        android:layout_marginEnd="16dp" />
 
     <TextView
         android:id="@+id/textView_home_goods_es"
@@ -180,7 +180,7 @@
         android:layout_marginRight="64dp"
         android:text="电话"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/editText_home_goods_tel"
+        app:layout_constraintEnd_toStartOf="@id/editText_home_goods_tel"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView_home_goods_address" />
 
